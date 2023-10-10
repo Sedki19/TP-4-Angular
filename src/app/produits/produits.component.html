@@ -1,18 +1,20 @@
 <div class="container">
     <div class="card shadow mb-4">
         <div class="card-body">
-            <table>
+            <table class="table table-striped">
                 <thead>
                     <tr>
                         <th>Liste de Produits</th>
                     </tr>
                 </thead>
-                <tbody *ngFor="let p of produits">
+                <tbody *ngFor="let produit of produits">
                     <tr>
-                        <td>{{p}}</td>
+                        <td>{{produit.idProduit}}</td>
+                        <td>{{produit.nomProduit}}</td>
+                        <td>{{produit.prixProduit}}</td>
+                        <td>{{produit.dateCreation | date:'dd/MM/yyyy'}}</td>
                     </tr>
                 </tbody>
-
             </table>
         </div>
     </div>
