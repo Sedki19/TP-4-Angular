@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th colspan="6">Liste de PC's</th>
+                    </tr>
+                    <tr style="background-color: rgba(128, 128, 128, 0.182); ">
+                        <th>ID</th>
+                        <th>Nom</th>
+                        <th>Prix</th>
+                        <th colspan="3">Specs</th>
+
+                    </tr>
+                </thead>
+
+                <tbody *ngFor="let pc of pcs">
+
+                    <tr>
+                        <td>{{pc.idpc}}</td>
+                        <td>{{pc.nompc}}</td>
+                        <td>{{pc.prixpc}}</td>
+                        <td>{{pc.Specs}}</td>
+                        <td><a class="btn btn-success" [routerLink]="['/updatepc',pc.idpc]">Modifier</a>
+                        </td>
+                        <td><a class="btn btn-danger" (click)="supprimerpc(pc)">Supprimer</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

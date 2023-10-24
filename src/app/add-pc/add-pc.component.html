@@ -1,0 +1,31 @@
+<div class="container">
+    <div>
+        <h2>Ajouter un Pc :</h2>
+    </div>
+    <form>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>ID PC</label>
+            <input type="text" [(ngModel)]="newpc.idpc" name="idpc" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Nom PC</label>
+            <input type="text" [(ngModel)]="newpc.nompc" name="nompc" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>Prix PC</label>
+            <input type="number" [(ngModel)]="newpc.prixpc" name="prixpc" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Specs</label>
+
+            <textarea type="date" [(ngModel)]="newpc.Specs" name="dateCreation" class="form-control" cols="30"
+                rows="10"></textarea>
+        </div>
+        <div class="mt-2">
+            <button type="submit" (click)="addpc()" class="btn btn-success" routerLink="pcs">Ajouter</button>
+            <div>
+                <h4>{{message}}</h4>
+            </div>
+        </div>
+    </form>
+</div>

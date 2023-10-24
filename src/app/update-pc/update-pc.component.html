@@ -1,0 +1,26 @@
+<div class="container">
+    <div>
+        <h2>Modifier un PC :</h2>
+    </div>
+    <form>
+        <div hidden class="col-sm-2 col-md-2 col-lg-2">
+            <label>ID pc</label>
+            <input readonly type="text" [(ngModel)]="currentpc.idpc" name="idpc" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Nom pc</label>
+            <input type="text" [(ngModel)]="currentpc.nompc" name="nompc" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>Prix pc</label>
+            <input type="number" [(ngModel)]="currentpc.prixpc" name="prixpc" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Specs</label>
+            <textarea [(ngModel)]="currentpc.Specs" name="Specs" class="form-control" cols="30" rows="10"></textarea>
+        </div>
+        <div class="mt-2">
+            <button type="submit" (click)="updatepc()" class="btn btn-success">Modifer</button>
+        </div>
+    </form>
+</div>
